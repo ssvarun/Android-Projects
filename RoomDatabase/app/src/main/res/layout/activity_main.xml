@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#7A2CF6"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firsttxt"
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="52dp"
+        android:hint="First name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hobby"
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:hint="Hobby"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firsttxt" />
+
+    <EditText
+        android:id="@+id/rollnumber"
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:hint="Roll number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hobby" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="215dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="48dp"
+        android:text="Save Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollnumber" />
+
+    <Button
+        android:id="@+id/deleteall"
+        android:layout_width="215dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:text="Delete all Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+    <LinearLayout
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteall"
+        app:layout_constraintVertical_bias="0.567">
+
+        <TextView
+            android:id="@+id/displayname"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:hint="Your name"
+            android:padding="3dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/displayhobby"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:hint="Your hobby"
+            android:padding="3dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/displayroll"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:hint="Your roll number"
+            android:padding="3dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:text="Read"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/provideroll" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Update Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteall" />
+
+    <EditText
+        android:id="@+id/provideroll"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="4dp"
+        android:hint="Enter roll no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteall" />
+
+    <Button
+        android:id="@+id/deleteroll"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:text="Delete roll no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/read" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="1dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#6F0AD5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

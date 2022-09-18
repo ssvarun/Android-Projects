@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firestore">
+
+    <EditText
+        android:id="@+id/cloudfirstname"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Gender"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cloudemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cloudfirstname"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/cloudemail"
+        android:layout_width="311dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/maleswitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="@color/forall"
+        android:text="Save data"
+        android:textColor="#090000"
+        app:layout_constraintBottom_toTopOf="@+id/readcategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/maleswitch"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="40dp"
+        android:text="Male"
+        app:layout_constraintBottom_toTopOf="@+id/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/readcategory"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="236dp"
+        android:text="Read"
+        android:textColor="#090909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".realtimemain">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/realemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@drawable/one" />
+
+    <EditText
+        android:id="@+id/realemail"
+        android:layout_width="311dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/realpass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/realpass"
+        android:layout_width="311dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/realname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/realname"
+        android:layout_width="311dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Enter name"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/savedata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/savedata"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/forall"
+        android:text="Save data"
+        android:textColor="#090000"
+        app:layout_constraintBottom_toTopOf="@+id/update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <Button
+        android:id="@+id/showdata"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/forall"
+        android:text="Show Data"
+        android:textColor="#090000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/forall"
+        android:text="Update data"
+        android:textColor="#090000"
+        app:layout_constraintBottom_toTopOf="@+id/showdata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="24dp"
+        android:text="Delete data"
+        android:textColor="#090000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showdata"
+        app:layout_constraintVertical_bias="0.638" />
+</androidx.constraintlayout.widget.ConstraintLayout>
