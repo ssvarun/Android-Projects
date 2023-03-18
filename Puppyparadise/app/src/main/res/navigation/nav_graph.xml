@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainfragment">
+
+    <fragment
+        android:id="@+id/mainfragment"
+        android:name="com.example.puppyparadise.Mainfragment"
+        android:label="Puppy Paradise"
+        tools:layout="@layout/fragment_mainfragment">
+        <action
+            android:id="@+id/action_mainfragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fade_in_animation"
+            app:exitAnim="@anim/fade_out_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_mainfragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_mainfragment_to_adminlogin"
+            app:destination="@id/adminlogin"
+            app:enterAnim="@anim/fade_in_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_mainfragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.puppyparadise.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.puppyparadise.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fade_in_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.puppyparadise.ShoppingFragment"
+        android:label="Shop Now"
+        tools:layout="@layout/fragment_shopping">
+        <action
+            android:id="@+id/action_shoppingFragment_to_petDetailedFragment"
+            app:destination="@id/petDetailedFragment"
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.puppyparadise.ProfileFragment"
+        android:label="Your Profile">
+        <action
+            android:id="@+id/action_profileFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_profileFragment_to_orderFragment"
+            app:destination="@id/orderFragment"
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_profileFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.puppyparadise.OrderFragment"
+        android:label="Your Orders" />
+    <fragment
+        android:id="@+id/petDetailedFragment"
+        android:name="com.example.puppyparadise.PetDetailedFragment"
+        android:label="Shop Now">
+        <action
+            android:id="@+id/action_petDetailedFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:popUpTo="@id/shoppingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_petDetailedFragment_to_completeorderFragment"
+            app:destination="@id/completeorderFragment"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.puppyparadise.CartFragment"
+        android:label="Your Cart">
+        <action
+            android:id="@+id/action_cartFragment_to_completeorderFragment"
+            app:destination="@id/completeorderFragment"
+            app:enterAnim="@anim/zoom_in_animation"
+            app:exitAnim="@anim/zoom_out_animation"
+            app:popUpTo="@id/cartFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeorderFragment"
+        android:name="com.example.puppyparadise.CompleteorderFragment"
+        android:label="Order Placed" />
+    <fragment
+        android:id="@+id/admincustomerFragment"
+        android:name="com.example.puppyparadise.adminfragments.AdmincustomerFragment"
+        android:label="Customers" />
+    <fragment
+        android:id="@+id/adminlogin"
+        android:name="com.example.puppyparadise.adminfragments.Adminlogin"
+        android:label="Admin Login">
+        <action
+            android:id="@+id/action_adminlogin_to_adminoptionspage"
+            app:destination="@id/adminoptionspage"
+            app:popUpTo="@id/adminlogin"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminoptionspage"
+        android:name="com.example.puppyparadise.adminfragments.Adminoptionspage"
+        android:label="Manage">
+        <action
+            android:id="@+id/action_adminoptionspage_to_addPet"
+            app:destination="@id/addPet" />
+        <action
+            android:id="@+id/action_adminoptionspage_to_admincustomerFragment"
+            app:destination="@id/admincustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPet"
+        android:name="com.example.puppyparadise.adminfragments.AddPet"
+        android:label="Add Pet">
+        <action
+            android:id="@+id/action_addPet_to_adminoptionspage"
+            app:destination="@id/adminoptionspage"
+            app:popUpTo="@id/addPet"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.puppyparadise.adminfragments.AboutFragment"
+        android:label="About App" />
+</navigation>

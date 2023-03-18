@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Puppy paradise</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="starttext">Welcome To Puppy Paradise!!</string>
+    <string name="starttext2">Our perfect companion never have fewer than four feet</string>
+    <string name="realadminemail">ssvarunlm10@gmail.com</string>
+    <string name="realadminpass">Smvs</string>
+    <string name="abouttxt">Our app allows you to shop your favorite pets,track their orders with an instant update of pets by Admin !!\n\n Admin is able to add pets and see the customers</string>
+
+</resources>
